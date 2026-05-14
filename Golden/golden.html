@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden — My life, organized.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:#030200;font-family:"Cormorant Garamond",serif;margin:0;padding:0;}
+.s{width:100%;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(32px,5vw,64px);padding:80px clamp(24px,5vw,80px);position:relative;overflow:hidden;}
+.s::before{content:"";position:absolute;width:80vw;height:80vw;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,#F4A623,transparent);opacity:.06;pointer-events:none;}
+.num{font-family:"DM Mono",monospace;font-size:clamp(10px,1vw,13px);letter-spacing:.4em;text-transform:uppercase;color:#C47D0E;opacity:.35;position:absolute;top:32px;left:0;right:0;text-align:center;}
+.wm{display:flex;flex-direction:column;align-items:center;gap:clamp(12px,2vw,20px);z-index:1;}
+.orn{display:flex;align-items:center;gap:12px;}
+.ol{width:clamp(40px,5vw,72px);height:.5px;background:#8A5600;}
+.og{width:clamp(6px,0.6vw,9px);height:clamp(6px,0.6vw,9px);background:#F4A623;transform:rotate(45deg);}
+.gn{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(52px,8vw,120px);line-height:1;letter-spacing:.12em;background:linear-gradient(170deg,#FFFBF0,#F9E07F,#F4A623,#C47D0E,#8A5600);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{font-family:"DM Mono",monospace;font-weight:300;font-size:clamp(9px,0.9vw,13px);letter-spacing:.45em;color:#8A5600;text-transform:uppercase;margin-right:-.45em;}
+.logos-wrap{display:flex;flex-direction:column;gap:clamp(8px,1.2vw,16px);width:100%;max-width:clamp(380px,55vw,780px);z-index:1;margin:0 auto;}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,16px);}
+a.mini{text-decoration:none;}
+.mini{border:1px solid;border-radius:4px;padding:clamp(10px,1.5vw,20px) clamp(6px,1vw,14px);display:flex;flex-direction:column;align-items:center;gap:clamp(4px,0.6vw,8px);position:relative;overflow:hidden;text-align:center;transition:transform .2s,opacity .2s;}
+.mini:hover{transform:translateY(-3px);opacity:.8;}
+.mini::before{content:"";position:absolute;width:80px;height:80px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none;}
+.mini-type{display:flex;align-items:baseline;}
+.mn{font-family:"Cormorant Garamond",serif;font-weight:300;font-style:italic;font-size:clamp(11px,1.4vw,20px);line-height:1;}
+.ms{width:.5px;height:clamp(10px,1.4vw,20px);margin:0 clamp(3px,0.5vw,8px);align-self:center;}
+.mh{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(11px,1.4vw,20px);letter-spacing:.06em;line-height:1;}
+.ml{font-family:"DM Mono",monospace;font-size:clamp(6px,0.7vw,10px);letter-spacing:.2em;text-transform:uppercase;opacity:.4;margin-right:-.2em;}
+.mini-orn{display:flex;align-items:center;gap:clamp(4px,0.6vw,8px);}
+.mo{width:clamp(14px,2vw,28px);height:.5px;}
+.mg{width:clamp(4px,0.5vw,7px);height:clamp(4px,0.5vw,7px);transform:rotate(45deg);flex-shrink:0;}
+.c-k{background:#020810;border-color:#0A4E84;}
+.c-k::before{background:radial-gradient(circle,#5AB4F0,transparent);}
+.c-k .mn{background:linear-gradient(160deg,#BAE0FF,#5AB4F0,#1A7EC4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-k .ms{background:linear-gradient(180deg,transparent,#0A4E84,transparent);}
+.c-k .mh{background:linear-gradient(160deg,#EFF8FF,#BAE0FF,#5AB4F0,#1A7EC4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-k .ml{color:#5AB4F0;}.c-k .mo{background:#0A4E84;}.c-k .mg{background:#5AB4F0;}
+.c-h{background:#080212;border-color:#4E0E8A;}
+.c-h::before{background:radial-gradient(circle,#A855F7,transparent);}
+.c-h .mn{background:linear-gradient(160deg,#DDB8FF,#A855F7,#7C22C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-h .ms{background:linear-gradient(180deg,transparent,#4E0E8A,transparent);}
+.c-h .mh{background:linear-gradient(160deg,#FAF0FF,#DDB8FF,#A855F7,#7C22C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-h .ml{color:#A855F7;}.c-h .mo{background:#4E0E8A;}.c-h .mg{background:#A855F7;}
+.c-p{background:#010A04;border-color:#065C2A;}
+.c-p::before{background:radial-gradient(circle,#34C472,transparent);}
+.c-p .mn{background:linear-gradient(160deg,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-p .ms{background:linear-gradient(180deg,transparent,#065C2A,transparent);}
+.c-p .mh{background:linear-gradient(160deg,#F0FFF6,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-p .ml{color:#34C472;}.c-p .mo{background:#065C2A;}.c-p .mg{background:#34C472;}
+.c-e{background:#080A0E;border-color:#404A58;}
+.c-e::before{background:radial-gradient(circle,#B0B8C4,transparent);}
+.c-e .mn{background:linear-gradient(160deg,#FFFFFF,#E8EAED,#B0B8C4,#707C8C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-e .ms{background:linear-gradient(180deg,transparent,#404A58,transparent);}
+.c-e .mh{background:linear-gradient(160deg,#FFFFFF,#E8EAED,#B0B8C4,#707C8C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-e .ml{color:#B0B8C4;}.c-e .mo{background:#404A58;}.c-e .mg{background:#B0B8C4;}
+.c-x{background:#0E0604;border-color:#7C3A20;}
+.c-x::before{background:radial-gradient(circle,#C2714F,transparent);}
+.c-x .mn{background:linear-gradient(160deg,#F5C4A8,#C2714F,#8B4513);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-x .ms{background:linear-gradient(180deg,transparent,#7C3A20,transparent);}
+.c-x .mh{background:linear-gradient(160deg,#FDF0E8,#F5C4A8,#C2714F,#8B4513);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-x .ml{color:#C2714F;}.c-x .mo{background:#7C3A20;}.c-x .mg{background:#C2714F;}
+.c-l{background:#060202;border-color:#8A0A0A;}
+.c-l::before{background:radial-gradient(circle,#F06060,transparent);}
+.c-l .my{font-family:"Cormorant Garamond",serif;font-weight:300;font-style:italic;font-size:clamp(11px,1.4vw,20px);line-height:1;background:linear-gradient(160deg,#FFBDBD,#F06060,#C42020);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-l .lf{font-family:"Cormorant Garamond",serif;font-weight:300;font-style:italic;font-size:clamp(11px,1.4vw,20px);line-height:1;background:linear-gradient(160deg,#FFF5F5,#FFBDBD,#F06060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-l .ms{background:linear-gradient(180deg,transparent,#8A0A0A,transparent);}
+.c-l .mh{background:linear-gradient(160deg,#FFF5F5,#FFBDBD,#F06060,#C42020);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-l .ml{color:#F06060;}.c-l .mo{background:#8A0A0A;}.c-l .mg{background:#F06060;}
+@media(max-width:480px){.logos-wrap{max-width:100%;}.gn{font-size:clamp(44px,14vw,64px);}}
+</style>
+</head>
+<body>
+<div class="s">
+  <span class="num">Golden</span>
+  <div class="wm">
+    <div class="orn"><div class="ol"></div><div class="og"></div><div class="ol"></div></div>
+    <span class="gn">Golden</span>
+    <span class="sub">My life, organized.</span>
+  </div>
+  <div class="logos-wrap">
+    <div class="row">
+      <a class="mini c-k" href="https://golden-kitchenhq.netlify.app/" target="_blank">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="mn">Kitchen</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">All in one place</span>
+      </a>
+      <a class="mini c-h" href="https://golden-househq.netlify.app/" target="_blank">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="mn">House</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Clean & project organizer</span>
+      </a>
+      <div class="mini c-p">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="mn">Plant</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Gardening all year</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mini c-e">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="mn">Health</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Medical alert</span>
+      </div>
+      <div class="mini c-x">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="mn">Chimio</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Just to be ready</span>
+      </div>
+      <div class="mini c-l">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="my">My</span><div class="ms"></div><span class="lf">Life</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Written my story</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
