@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#030200"/>
-  <polygon points="16,4 28,16 16,28 4,16" fill="#F4A623"/>
-  <polygon points="16,7 25,16 16,25 7,16" fill="#C47D0E"/>
-  <polygon points="16,11 21,16 16,21 11,16" fill="#F9E07F"/>
+  <rect width="32" height="32" rx="6" fill="#030200"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9E07F"/>
+      <stop offset="50%" stop-color="#F4A623"/>
+      <stop offset="100%" stop-color="#8A5600"/>
+    </linearGradient>
+  </defs>
+  <text x="16" y="25" text-anchor="middle" font-family="Georgia,serif" font-weight="300" font-size="26" fill="url(#g)">G</text>
 </svg>
