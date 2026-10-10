@@ -21,6 +21,7 @@ body{background:#030200;font-family:"Cormorant Garamond",serif;margin:0;padding:
 .sub{font-family:"DM Mono",monospace;font-weight:300;font-size:clamp(9px,0.9vw,13px);letter-spacing:.45em;color:#8A5600;text-transform:uppercase;margin-right:-.45em;}
 .logos-wrap{display:flex;flex-direction:column;gap:clamp(8px,1.2vw,16px);width:100%;max-width:clamp(380px,55vw,780px);z-index:1;margin:0 auto;}
 .row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,16px);}
+.row-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(8px,1.2vw,16px);max-width:calc(66.66% + clamp(4px,0.6vw,8px));margin:0 auto;width:100%;}
 a.mini{text-decoration:none;}
 .mini{border:1px solid;border-radius:4px;padding:clamp(10px,1.5vw,20px) clamp(6px,1vw,14px);display:flex;flex-direction:column;align-items:center;gap:clamp(4px,0.6vw,8px);position:relative;overflow:hidden;text-align:center;transition:transform .2s,opacity .2s;}
 .mini:hover{transform:translateY(-3px);opacity:.8;}
@@ -55,20 +56,6 @@ a.mini{text-decoration:none;}
 .c-bu .mh{background:linear-gradient(160deg,#FFFFFF,#E8EAED,#B0B8C4,#707C8C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .c-bu .ml{color:#B0B8C4;}.c-bu .mo{background:#404A58;}.c-bu .mg{background:#B0B8C4;}
 
-.c-p{background:#010A04;border-color:#065C2A;}
-.c-p::before{background:radial-gradient(circle,#34C472,transparent);}
-.c-p .mn{background:linear-gradient(160deg,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-p .ms{background:linear-gradient(180deg,transparent,#065C2A,transparent);}
-.c-p .mh{background:linear-gradient(160deg,#F0FFF6,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-p .ml{color:#34C472;}.c-p .mo{background:#065C2A;}.c-p .mg{background:#34C472;}
-
-.c-v{background:#01100E;border-color:#0A4A42;}
-.c-v::before{background:radial-gradient(circle,#2DD4BF,transparent);}
-.c-v .mn{background:linear-gradient(160deg,#B2FFF8,#2DD4BF,#0F9B87);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-v .ms{background:linear-gradient(180deg,transparent,#0A4A42,transparent);}
-.c-v .mh{background:linear-gradient(160deg,#F0FFFD,#B2FFF8,#2DD4BF,#0F9B87);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-v .ml{color:#2DD4BF;}.c-v .mo{background:#0A4A42;}.c-v .mg{background:#2DD4BF;}
-
 .c-b{background:#080600;border-color:#5A3800;}
 .c-b::before{background:radial-gradient(circle,#F4A623,transparent);}
 .c-b .mn{background:linear-gradient(160deg,#E0F4FF,#7EC8F4,#2389D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
@@ -76,13 +63,12 @@ a.mini{text-decoration:none;}
 .c-b .mh{background:linear-gradient(160deg,#E0F4FF,#7EC8F4,#2389D4,#0A3A6E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .c-b .ml{color:#C47D0E;}.c-b .mo{background:#5A3800;}.c-b .mg{background:#F4A623;}
 
-.c-l{background:#060202;border-color:#8A0A0A;}
-.c-l::before{background:radial-gradient(circle,#F06060,transparent);}
-.c-l .my{font-family:"Cormorant Garamond",serif;font-weight:300;font-style:italic;font-size:clamp(11px,1.4vw,20px);line-height:1;background:linear-gradient(160deg,#FFBDBD,#F06060,#C42020);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-l .lf{font-family:"Cormorant Garamond",serif;font-weight:300;font-style:italic;font-size:clamp(11px,1.4vw,20px);line-height:1;background:linear-gradient(160deg,#FFF5F5,#FFBDBD,#F06060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-l .ms{background:linear-gradient(180deg,transparent,#8A0A0A,transparent);}
-.c-l .mh{background:linear-gradient(160deg,#FFF5F5,#FFBDBD,#F06060,#C42020);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.c-l .ml{color:#F06060;}.c-l .mo{background:#8A0A0A;}.c-l .mg{background:#F06060;}
+.c-p{background:#010A04;border-color:#065C2A;}
+.c-p::before{background:radial-gradient(circle,#34C472,transparent);}
+.c-p .mn{background:linear-gradient(160deg,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-p .ms{background:linear-gradient(180deg,transparent,#065C2A,transparent);}
+.c-p .mh{background:linear-gradient(160deg,#F0FFF6,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-p .ml{color:#34C472;}.c-p .mo{background:#065C2A;}.c-p .mg{background:#34C472;}
 
 @media(max-width:480px){.logos-wrap{max-width:100%;}.gn{font-size:clamp(44px,14vw,64px);}}
 </style>
@@ -107,37 +93,23 @@ a.mini{text-decoration:none;}
         <div class="mini-type"><span class="mn">House</span><div class="ms"></div><span class="mh">HQ</span></div>
         <span class="ml">Clean & project organizer</span>
       </a>
-      <a class="mini c-bu" href="https://stonecold93-hue.github.io/budgetHQ/" target="_blank">
+      <a class="mini c-bu" href="https://stonecold93-hue.github.io/budgethq/" target="_blank">
         <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
         <div class="mini-type"><span class="mn">Budget</span><div class="ms"></div><span class="mh">HQ</span></div>
         <span class="ml">Depenses & revenus</span>
       </a>
     </div>
-    <div class="row">
-      <a class="mini c-p" href="https://stonecold93-hue.github.io/plantHQ/" target="_blank">
-        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
-        <div class="mini-type"><span class="mn">Plant</span><div class="ms"></div><span class="mh">HQ</span></div>
-        <span class="ml">Gardening all year</span>
-      </a>
-      <a class="mini c-v" href="https://stonecold93-hue.github.io/VaultHQ/" target="_blank">
-        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
-        <div class="mini-type"><span class="mn">Vault</span><div class="ms"></div><span class="mh">HQ</span></div>
-        <span class="ml">Ideas, organized.</span>
-      </a>
+    <div class="row-2">
       <a class="mini c-b" href="https://stonecold93-hue.github.io/BeccaricHQ/" target="_blank">
         <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
         <div class="mini-type"><span class="mn">Beccaric</span><div class="ms"></div><span class="mh">HQ</span></div>
         <span class="ml">Notre coin</span>
       </a>
-    </div>
-    <div class="row">
-      <div></div>
-      <a class="mini c-l" href="https://stonecold93-hue.github.io/MyLifeHQ/" target="_blank">
+      <a class="mini c-p" href="https://stonecold93-hue.github.io/plantHQ/" target="_blank">
         <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
-        <div class="mini-type"><span class="my">My</span><div class="ms"></div><span class="lf">Life</span><div class="ms"></div><span class="mh">HQ</span></div>
-        <span class="ml">Written my story</span>
+        <div class="mini-type"><span class="mn">Plant</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Gardening all year</span>
       </a>
-      <div></div>
     </div>
   </div>
 </div>
