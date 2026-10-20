@@ -21,7 +21,7 @@ body{background:#030200;font-family:"Cormorant Garamond",serif;margin:0;padding:
 .sub{font-family:"DM Mono",monospace;font-weight:300;font-size:clamp(9px,0.9vw,13px);letter-spacing:.45em;color:#8A5600;text-transform:uppercase;margin-right:-.45em;}
 .logos-wrap{display:flex;flex-direction:column;gap:clamp(8px,1.2vw,16px);width:100%;max-width:clamp(380px,55vw,780px);z-index:1;margin:0 auto;}
 .row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,16px);}
-.row-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(8px,1.2vw,16px);max-width:calc(66.66% + clamp(4px,0.6vw,8px));margin:0 auto;width:100%;}
+.row-2{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,16px);width:100%;}
 a.mini{text-decoration:none;}
 .mini{border:1px solid;border-radius:4px;padding:clamp(10px,1.5vw,20px) clamp(6px,1vw,14px);display:flex;flex-direction:column;align-items:center;gap:clamp(4px,0.6vw,8px);position:relative;overflow:hidden;text-align:center;transition:transform .2s,opacity .2s;}
 .mini:hover{transform:translateY(-3px);opacity:.8;}
@@ -63,6 +63,13 @@ a.mini{text-decoration:none;}
 .c-b .mh{background:linear-gradient(160deg,#E0F4FF,#7EC8F4,#2389D4,#0A3A6E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .c-b .ml{color:#C47D0E;}.c-b .mo{background:#5A3800;}.c-b .mg{background:#F4A623;}
 
+.c-sh{background:#0A0A0A;border-color:#5A5040;}
+.c-sh::before{background:radial-gradient(circle,#F5F0E8,transparent);}
+.c-sh .mn{background:linear-gradient(160deg,#F5F0E8,#E8E0D0,#C8BCA8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-sh .ms{background:linear-gradient(180deg,transparent,#5A5040,transparent);}
+.c-sh .mh{background:linear-gradient(160deg,#FFFFFF,#F5F0E8,#E8E0D0,#C8BCA8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.c-sh .ml{color:#D4CCBC;}.c-sh .mo{background:#5A5040;}.c-sh .mg{background:#E8E0D0;}
+
 .c-p{background:#010A04;border-color:#065C2A;}
 .c-p::before{background:radial-gradient(circle,#34C472,transparent);}
 .c-p .mn{background:linear-gradient(160deg,#A8F0C4,#34C472,#0E9044);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
@@ -100,6 +107,11 @@ a.mini{text-decoration:none;}
       </a>
     </div>
     <div class="row-2">
+      <a class="mini c-sh" href="https://stonecold93-hue.github.io/shoppingHQ/" target="_blank">
+        <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
+        <div class="mini-type"><span class="mn">Shopping</span><div class="ms"></div><span class="mh">HQ</span></div>
+        <span class="ml">Your shopping lists</span>
+      </a>
       <a class="mini c-b" href="https://golden-beccarichq.netlify.app/" target="_blank">
         <div class="mini-orn"><div class="mo"></div><div class="mg"></div><div class="mo"></div></div>
         <div class="mini-type"><span class="mn">Beccaric</span><div class="ms"></div><span class="mh">HQ</span></div>
